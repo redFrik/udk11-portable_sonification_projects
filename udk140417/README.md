@@ -13,7 +13,9 @@ _introduction to sensors, sonification and supercollider_
 sensors
 =======
 
-let's make a list of different type of sensors / inputs / detectors.  then see [arduino playground](http://playground.arduino.cc/Main/InterfacingWithHardware#InputTOC).  and for more inspiration look at sensors category at for example [sparkfun](https://www.sparkfun.com/categories/23) or [adafruit](http://www.adafruit.com/category/35).
+let's make a list of different types of sensors / inputs / detectors.
+
+then see [arduino playground](http://playground.arduino.cc/Main/InterfacingWithHardware#InputTOC) for a great overview.  and for more inspiration look at sensors category at for example [sparkfun](https://www.sparkfun.com/categories/23) or [adafruit](http://www.adafruit.com/category/35).
 
 * [LDR](http://en.wikipedia.org/wiki/Photodetector) (aka light sensors or photodetectors - most often a light dependent resistors but can also be a photodiode / light sensitive transistor)
 * IR sensors (infra red light - you can find them in printers)
@@ -21,10 +23,10 @@ let's make a list of different type of sensors / inputs / detectors.  then see [
 * DIY light sensors with colour filters (pieces of thin plastic film)
 
 * webcamera (but to do tracking you often need software/systems like.. [tuio](http://tuio.lfsaw.de), [open cv](http://opencv.org) and then run it with python, max, processing, pd etc)
-* [kinect](http://en.wikipedia.org/wiki/Kinect) (3d scenery - also needs fast computer and lots of power but works very well)
-* [leap motion](http://www.onformative.com/lab/leapmotionp5/) - works like a miniature kinect (3d)
+* [kinect](http://en.wikipedia.org/wiki/Kinect) (3d scenery - can track people very well - but need a fast computer)
+* [leap motion](http://www.onformative.com/lab/leapmotionp5/) (works like a miniature kinect (3d))
 
-* electret mic (+ sound analysis in computer (amp, pitch, timbre))
+* electret mic (with sound analysis in computer - track things like loudness, pitch, timbre, chords, tempo etc etc - voice analysis possible but hard)
 * piezo (aka contact mic - works as knock sensor or vibration detector)
 * springs (can act as cheap vibration/shock sensors - DIY with a spring inside a metal tube - ultra cheap)
 
