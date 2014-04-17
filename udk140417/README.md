@@ -20,14 +20,16 @@ then see [arduino playground](http://playground.arduino.cc/Main/InterfacingWithH
 * [LDR](http://en.wikipedia.org/wiki/Photodetector) (aka light sensors or photodetectors - most often a light dependent resistors but can also be a photodiode / light sensitive transistor)
 * IR sensors (infra red light - you can find them in printers)
 * UV sensors (ultraviolet light)
-* DIY light sensors with colour filters (pieces of thin plastic film)
+* DIY light sensors with colour filters (add pieces of thin plastic film in front of the LDR)
 
-* webcamera (but to do tracking you often need software/systems like.. [tuio](http://tuio.lfsaw.de), [open cv](http://opencv.org) and then run it with python, max, processing, pd etc)
+* webcamera (but to do serious tracking you often need to use standard software / systems like [tuio](http://tuio.lfsaw.de) or [open cv](http://opencv.org) and then run it within python, max, processing, pd etc)
+* radioactive source + webcam (ref. David's project last year)
+* webcamera used as a single colour sensor (a bit of an overkill but works well and is easy to set up)
 * [kinect](http://en.wikipedia.org/wiki/Kinect) (3d scenery - can track people very well - but need a fast computer)
-* [leap motion](http://www.onformative.com/lab/leapmotionp5/) (works like a miniature kinect (3d))
+* [leap motion](http://www.onformative.com/lab/leapmotionp5/) (works like a miniature kinect - 3d - good for hand gestures)
 
 * electret mic (with sound analysis in computer - track things like loudness, pitch, timbre, chords, tempo etc etc - voice analysis possible but hard)
-* piezo (aka contact mic - works as knock sensor or vibration detector)
+* piezo (aka contact mic - also works as knock, shock or vibration detector)
 * springs (can act as cheap vibration/shock sensors - DIY with a spring inside a metal tube - ultra cheap)
 
 * switches (with one or more states)
@@ -59,16 +61,14 @@ then see [arduino playground](http://playground.arduino.cc/Main/InterfacingWithH
 * gyroscope
 * [IMU](http://www.instructables.com/id/Accelerometer-Gyro-Tutorial/?ALLSTEPS) (inertial measurement unit - basically a combination of the three above - gives 6DOF, 9DOF, etc - DOF = degrees of freedom)
 
-* SDR (software defined radio - can track things like satellites, mobiles, police radio, airplanes etc etc)
-* [funcube dongle](http://www.funcubedongle.com)
-* [rtl-sdr](http://sdr.osmocom.org/trac/wiki/rtl-sdr) (cheap tv-tuner used for sdr)
-* radioactive source + webcam (ref. David's project last year)
+* SDR (software defined radio - can track things like satellites, mobiles, police radio, airplanes etc etc - try the [funcube dongle](http://www.funcubedongle.com) or [rtl-sdr](http://sdr.osmocom.org/trac/wiki/rtl-sdr) (cheap tv-tuner used for sdr))
 
 * [inductive charger](http://www.adafruit.com/products/1407) (can be used as a sensor in combo with a current sensor)
-* [current sensors](http://www.adafruit.com/products/904) (measure power consumption - also household power meters etc - in circuit or as a clamp meter)
+* [current sensors](http://www.adafruit.com/products/904) (measure power consumption - also household power meters etc - in circuit or as a clamp meter that you can put around the cable - both AC and DC)
+* voltage (it's easy to read voltage directly with an analog input - though take care not to exceed the maximum (1.8v on bbb, 5v on arduino) - use voltage dividers / optoisolators for protection)
 
-* RFID (for example the [id-20](https://www.sparkfun.com/products/11828) together with a small breakout board - passive tags - great and the tags are cheap)
-* NFC (near field communication - read and write data to tags - reader often built into phones - active tags - drawback is that the tags are more expensive)
+* RFID (for example the [id-20](https://www.sparkfun.com/products/11828) together with a small breakout board - passive tags - great and the tags are cheap - note the different frequencies - 125khz is a common standard)
+* NFC (near field communication - read and write data to tags - reader often built into mobiles - active tags - drawback is that the tags are more expensive)
 
 * [emotive](http://emotiv.com) (read brainwaves - EEG)
 * [GSR](http://www.cooking-hacks.com/galvanic-skin-response-sensor-gsr-sweating-ehealth-medical) (galvanic skin response - aka lie detector)
@@ -77,10 +77,10 @@ then see [arduino playground](http://playground.arduino.cc/Main/InterfacingWithH
 
 * gas (lots of different types)
 * smell (?)
-* smoke detector
-* other chemical detectors and chemistry sensors
+* smoke detector (?)
+* chemical detectors / chemistry sensors (?)
 
-* GPS (global positioning system - only work outdoors - built in to mobiles but also available as modules)
+* GPS (global positioning system - only work outdoors - built into mobiles but also available as modules)
 * GSM (crude positioning using triangulation)
 * [DC77](http://en.wikipedia.org/wiki/DCF77) (clock signal sent out from frankfurt - DIY receiver or kit (available at segor))
 
@@ -88,6 +88,7 @@ then see [arduino playground](http://playground.arduino.cc/Main/InterfacingWithH
 
 * using data from online sensors and databases (twitter feeds, weather data etc...)
 
+* hijack the sensors in your mobile (try out the app [androsensor](https://play.google.com/store/apps/details?id=com.fivasim.androsensor) on android or [sensor monitor](https://sites.google.com/a/fuzzface.net/app//sensor-monitor) on iphone)
 
 sonification
 ============
