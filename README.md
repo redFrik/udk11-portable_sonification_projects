@@ -10,7 +10,8 @@ room111, UdK, medienhaus, kleistpark
 
 dates
 -----
-- [ ] [17apr 14-16](https://github.com/redFrik/udk11-Portable_sonification_projects/tree/master/udk140417): introduction to sensors, supercollider and sonification
+- [x] [17apr 14-16](https://github.com/redFrik/udk11-Portable_sonification_projects/tree/master/udk140417): introduction to sensors, sonification and supercollider
+- [ ] [24apr 14-16]
 
 bring laptop and headphones.
 

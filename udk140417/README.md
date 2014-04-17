@@ -8,17 +8,16 @@ general course introduction
 140417
 ======
 
-_introduction to sensors, supercollider and sonification_
+_introduction to sensors, sonification and supercollider_
 
 sensors
 =======
 
-let's make a list of different type of sensors / inputs / detectors.  then see [http://playground.arduino.cc/Main/InterfacingWithHardware#InputTOC].  and for more inspiration look at sensors category at for example [sparkfun](https://www.sparkfun.com/categories/23).
+let's make a list of different type of sensors / inputs / detectors.  then see [arduino playground](http://playground.arduino.cc/Main/InterfacingWithHardware#InputTOC).  and for more inspiration look at sensors category at for example [sparkfun](https://www.sparkfun.com/categories/23) or [adafruit](http://www.adafruit.com/category/35).
 
-
-* [light sensors](http://en.wikipedia.org/wiki/Photodetector) (aka photodetectors), also called LDR (light dependent resistors)
+* [LDR](http://en.wikipedia.org/wiki/Photodetector) (aka light sensors or photodetectors - most often a light dependent resistors but can also be a photodiode / light sensitive transistor)
 * IR sensors (infra red light - you can find them in printers)
-* uv sensors (ultraviolet light)
+* UV sensors (ultraviolet light)
 * DIY light sensors with colour filters (pieces of thin plastic film)
 
 * webcamera (but to do tracking you often need software/systems like.. [tuio](http://tuio.lfsaw.de), [open cv](http://opencv.org) and then run it with python, max, processing, pd etc)
@@ -41,7 +40,7 @@ let's make a list of different type of sensors / inputs / detectors.  then see [
 
 * reed switches (magnetic switches - digital - use a magnet to switch them on - cheap and reliable - range up to around 10cm depending on magnet strength)
 * hall effect sensor (also magnetic - analog - often used in spinning wheels to detect number or laps or speed - no physical contact needed)
-* [emf](http://www.instructables.com/id/Arduino-EMF-Detector/) (use a single bare wire to detect electromagnetic fields - works like an antenna)
+* [EMF](http://www.instructables.com/id/Arduino-EMF-Detector/) (use a single bare wire to detect electromagnetic fields - works like an antenna)
 * [theremin](http://en.wikipedia.org/wiki/Theremin) (proximity)
 
 * thermistor (temperature)
@@ -85,7 +84,7 @@ let's make a list of different type of sensors / inputs / detectors.  then see [
 
 * ultrasound (good for proximity - used in cars)
 
-* online sensors and databases (twitter feeds, weather data etc...)
+* using data from online sensors and databases (twitter feeds, weather data etc...)
 
 
 sonification
@@ -93,8 +92,7 @@ sonification
 
 discuss.
 
-inspiration: biohacking / sensory expansion: [https://www.youtube.com/watch?v=a-Dv6dDtdcs] (part2 @ 3:00 talk about magnet sensors)
-
+inspiration: biohacking / sensory expansion: <https://www.youtube.com/watch?v=a-Dv6dDtdcs> (part2 @ 3:00 talk about magnet sensors implanted in fingertips)
 
 supercollider
 =============
