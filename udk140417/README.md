@@ -95,7 +95,7 @@ sonification
 
 discuss.
 
-inspiration: biohacking / sensory expansion: <https://www.youtube.com/watch?v=a-Dv6dDtdcs> (part2 @ 3:00 talk about magnet sensors implanted in fingertips)
+inspiration: biohacking / sensory expansion: <https://www.youtube.com/watch?v=a-Dv6dDtdcs> ([part2 @ 3:00](https://www.youtube.com/watch?v=7RV_6Axb80g#t=179) she talks about magnet sensors implanted in fingertips)
 
 supercollider
 =============
