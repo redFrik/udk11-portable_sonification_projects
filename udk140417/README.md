@@ -23,6 +23,7 @@ then see [arduino playground](http://playground.arduino.cc/Main/InterfacingWithH
 * DIY light sensors with colour filters (add pieces of thin plastic film in front of the LDR)
 * webcamera (but to do serious tracking you often need to use software / systems like [tuio](http://tuio.lfsaw.de) or [open cv](http://opencv.org) and then run it within python, max, processing, pd etc)
 * radioactive source + webcam (ref. David's project last semester)
+* geigercounter as a sensor
 * webcamera used as a single colour sensor (a bit of an overkill but works well and is easy to program - see pd/gem videotracking patches from previous semesters)
 * [kinect](http://en.wikipedia.org/wiki/Kinect) (3d scenery - can track people very well - but need a fast computer)
 * [leap motion](http://www.onformative.com/lab/leapmotionp5/) (works like a miniature kinect - 3d - good for hand gestures)
