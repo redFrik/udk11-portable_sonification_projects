@@ -37,20 +37,23 @@ OSCFunc.trace(true);//posting all incoming osc data
 OSCFunc.trace(false);//stop posting
 
 (
-Ndef.control(\temp);
-Ndef.control(\button);
-Ndef.control(\light);
-Ndef.control(\accx);
-Ndef.control(\accy);
-Ndef.control(\accz);
+Ndef(\temp, {|val| Lag.kr(val, 1/50)});
+Ndef(\button, {|val| Lag.kr(val, 1/50)});
+Ndef(\light, {|val| Lag.kr(val, 1/50)});
+Ndef(\accx, {|val| Lag.kr(val, 1/50)});
+Ndef(\accy, {|val| Lag.kr(val, 1/50)});
+Ndef(\accz, {|val| Lag.kr(val, 1/50)});
 OSCFunc({|msg|
-	//msg.postln;//debug
-	Ndef(\temp).source= msg[7];
-	Ndef(\button).source= msg[6];
-	Ndef(\light).source= msg[5];
-	Ndef(\x).source= msg[4];
-	Ndef(\y).source= msg[3];
-	Ndef(\z).source= msg[2];
+	msg.postln;//debug
+	Ndef(\temp).set(\val, msg[7]);
+	Ndef(\button).set(\val, msg[6]);
+	Ndef(\light).set(\val, msg[5]);
+	Ndef(\x).set(\val, msg[4]);
+	Ndef(\y).set(\val, msg[3]);
+	Ndef(\z).set(\val, msg[2]);
 }, \broadcast);
 )
+
+
+Ndef(\snd, {SinOsc.ar([400, 404]+(400*Ndef.kr(\temp)), 0, Ndef.kr(\button))}).play //use temperature as frequency and button as volume
 ```
