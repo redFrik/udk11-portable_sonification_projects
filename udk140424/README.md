@@ -48,9 +48,9 @@ OSCFunc({|msg|
 	Ndef(\temp).set(\val, msg[7]);
 	Ndef(\button).set(\val, msg[6]);
 	Ndef(\light).set(\val, msg[5]);
-	Ndef(\x).set(\val, msg[4]);
-	Ndef(\y).set(\val, msg[3]);
-	Ndef(\z).set(\val, msg[2]);
+	Ndef(\accx).set(\val, msg[4]);
+	Ndef(\accy).set(\val, msg[3]);
+	Ndef(\accz).set(\val, msg[2]);
 }, \broadcast);
 )
 
