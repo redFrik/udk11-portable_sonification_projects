@@ -15,9 +15,8 @@ both are 'scenes' for the rjdj app running on iphone (or sceneplayer on android)
 rjdj is/was actually puredata and eargasm, world quantizer etc are relatively simple pd patches.
 we can quite easily code the same thing with our beaglebone+supercollider setup.
 
-instant decomposer... https://www.youtube.com/watch?v=oML8PzMu3Zs
-
-another system written by [katja](www.katjaas.nl) in pure data.  read more about it here... [slicejockey](http://www.katjaas.nl/slicejockey/slicejockey.html) and here... [beatdetection](http://www.katjaas.nl/beatdetection/beatdetection.html)
+another system written by [katja](www.katjaas.nl) in pure data is instant decomposer... https://www.youtube.com/watch?v=oML8PzMu3Zs
+read more about it here... [slicejockey](http://www.katjaas.nl/slicejockey/slicejockey.html) and here... [beatdetection](http://www.katjaas.nl/beatdetection/beatdetection.html).
 you can also download the pd patches and study them.
 
 microphone cutup
