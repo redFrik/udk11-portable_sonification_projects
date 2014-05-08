@@ -1,17 +1,35 @@
 140508
 ======
 
-_more supercollider (mic input) and some python_
+_more supercollider (mic input)_
 
+inspiration
+===========
+first some inspiration for today's exercises.  check these...
+
+eargasm... https://www.youtube.com/watch?v=51ucXcWt-pg
+
+world quantizer... https://www.youtube.com/watch?v=_cFtXS7g48A
+
+both are 'scenes' for the rjdj app running on iphone (or sceneplayer on android).
+rjdj is/was actually puredata and eargasm, world quantizer etc are relatively simple pd patches.
+we can quite easily code the same thing with our beaglebone+supercollider setup.
+
+instant decomposer... https://www.youtube.com/watch?v=oML8PzMu3Zs
+
+another system written by [katja](www.katjaas.nl) in pure data.  read more about it here... [slicejockey](http://www.katjaas.nl/slicejockey/slicejockey.html) and here... [beatdetection](http://www.katjaas.nl/beatdetection/beatdetection.html)
+you can also download the pd patches and study them.
+
+microphone cutup
+================
 
 ```
 //f0 sound detector - automatically record sound into buffers - with playback - originally written for av-programming udk class ws2011/12
-//added more examples for av-programming udk ss2014
+//added more examples and feedback version for av-programming udk ss2014
 (
 z= 16;	//number of buffers in b
 l= 2;	//length of buffers in seconds
 x= false;	//mute recording
-Server.default= s= Server.local;
 s.latency= 0.05;
 s.waitForBoot{
 	var detectorSynth, recorderSynths, responder;
@@ -66,10 +84,8 @@ s.waitForBoot{
 };
 )
 
-/*
 x= true;	//mute recording (stop collecting more)
 x= false;	//unmute
-*/
 
 (	//rewite the playback as it is running
 	Pdef(\pattern1, Pbind(
@@ -83,16 +99,14 @@ x= false;	//unmute
 	));
 )
 
-
-
 (	//overlaps
 	Pdef(\pattern1, Pbind(
 		\instrument, \f0SoundPlayer,
 		\index, Pseq((0..(z-1)), inf),	//index selector, played in order
 		\buf, Pfunc({|ev| b[ev.index]}),
-	\amp, [0.8, 0.5, 0.25, 0.125],
+		\amp, [0.8, 0.5, 0.25, 0.125],
 		\dur, Prand([0.25, 0.5, 1, 2, Pn(0.125, 4)], inf),
-	\legato, 2,
+		\legato, 2,
 		\pan, Pwhite(-0.8, 0.8, inf),
 		\speed, Prand([1, 1.25, 1.5, 1.75, 0.75, 0.5], inf)*Prand([1, -1], inf)	//back and forth
 	));
