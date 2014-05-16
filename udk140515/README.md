@@ -6,7 +6,7 @@ _installing and preparing a system on the beaglebone black_
 for this you will need a beaglebone black (bbb), an sd-card, one mini usb cable, headphones, and a usb soundcard.
 
 installing debian linux
-__
+--
 
 download the latest debian image... http://beagleboard.org/latest-images/ (Debian (BeagleBone, BeagleBone Black - 2GB SD) 2014-04-23)
 
@@ -23,7 +23,7 @@ starting for the first time
 
 insert the micro sdcard in the bbb, connect mini usb cable to computer and it should start booting up - check the blue leds.
 
-open terminal/console application on you laptop and type 'ssh debian@beaglebone.local' and password 'temppwd'.
+open terminal/console application on you laptop and type `ssh debian@beaglebone.local` and the default password is `temppwd`.
 
 ```
 //new debian bbb image bone-debian-7.4-2014-04-23-2gb.img
