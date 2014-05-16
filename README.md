@@ -14,7 +14,7 @@ dates
 - [x] [24apr 14-16](https://github.com/redFrik/udk11-Portable_sonification_projects/tree/master/udk140424): supercollider in more detail (soundfiles and sensor inputs)
 - [ ] 01may: **NO CLASS**
 - [x] [08may 14-16](https://github.com/redFrik/udk11-Portable_sonification_projects/tree/master/udk140508): more supercollider (mic input)
-- [ ] [15may 14-16](https://github.com/redFrik/udk11-Portable_sonification_projects/tree/master/udk140515): 
+- [x] [15may 14-16](https://github.com/redFrik/udk11-Portable_sonification_projects/tree/master/udk140515): installing and preparing a system on the beaglebone black
 
 bring laptop and headphones.
 

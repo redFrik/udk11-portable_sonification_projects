@@ -5,13 +5,21 @@ _installing and preparing a system on the beaglebone black_
 
 for this you will need a beaglebone black (bbb), an sd-card, one mini usb cable, headphones, and a usb soundcard.
 
+installing debian linux
 __
 
 download the latest debian image... http://beagleboard.org/latest-images/ (Debian (BeagleBone, BeagleBone Black - 2GB SD) 2014-04-23)
 
-extract the .xy image with 'the unarchiver' or similar.
+mac osx: extract the .xy image with 'the unarchiver' or similar.
 
-use Pi Filler <http://ivanx.com/raspberrypi/> or similar to copy over the image.
+mac osx: use Pi Filler <http://ivanx.com/raspberrypi/> or similar to copy over the image.
+
+on windows you can use win32diskimager <http://sourceforge.net/projects/win32diskimager/>
+
+there are good general instructions here... https://learn.adafruit.com/beaglebone-black-installing-operating-systems/overview
+
+starting for the first time
+--
 
 insert the micro sdcard in the bbb, connect mini usb cable to computer and it should start booting up - check the blue leds.
 
@@ -175,4 +183,3 @@ pico mysc.scd
 	"sudo jack_connect SuperCollider:out_2 system:playback_2 &".unixCmd;
 	a= {SinOsc.ar([400,404],0,0.2)}.play;
 ```
-
