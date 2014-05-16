@@ -3,12 +3,16 @@
 
 _installing and preparing a system on the beaglebone black_
 
-for this you will need a beaglebone black (bbb), an sd-card, one mini usb cable, headphones, and a usb soundcard.
+for this you will need a beaglebone black (bbb), a sd-card, a mini usb cable, headphones, and a usb soundcard.
+
+note: all these things you only need to do once.
 
 installing debian linux
 --
 
 download the latest debian image... http://beagleboard.org/latest-images/ (Debian (BeagleBone, BeagleBone Black - 2GB SD) 2014-04-23)
+
+and copy the .img file over to the sd card using the following tools...
 
 mac osx: extract the .xy image with 'the unarchiver' or similar.
 
@@ -21,9 +25,11 @@ there are good general instructions here... https://learn.adafruit.com/beaglebon
 starting for the first time
 --
 
-insert the micro sdcard in the bbb, connect mini usb cable to computer and it should start booting up - check the blue leds.
+insert the micro sdcard in the bbb, connect mini usb cable to computer and it should start booting up - check the blue status leds.
 
 open terminal/console application on you laptop and type `ssh debian@beaglebone.local` and the default password is `temppwd`.
+
+if you cannot connect and you see the `ssh: Could not resolve hostname beaglebone.local: nodename nor servname provided, or not known` error, connecting an ethernet cable from your laptop to the bbb and try again.
 
 ```
 //new debian bbb image bone-debian-7.4-2014-04-23-2gb.img
@@ -32,15 +38,18 @@ open terminal/console application on you laptop and type `ssh debian@beaglebone.
 
 sudo passwd debian #and change it to something easy that you will remember
 date
-sudo dpkg-reconfigure tzdata
-echo 'export LC_ALL="en_US.UTF-8"' >> ~/.bashrc
+sudo dpkg-reconfigure tzdata #and set timezone
+echo 'export LC_ALL="en_US.UTF-8"' >> ~/.bashrc #this just to avoid locale warnings
 
 //—expand filesystem
-df # show something like 97% full
+df # will show something like 95% full
 sudo /opt/scripts/tools/grow_partition.sh
 sudo reboot # and log in again
 df # should now show a lot more free space
 
+//--update system
+#note if this goes wrong make sure you have internet access on the bbb,
+#e.g. enable internet sharing from wlan to ethernet under system preferences/sharing
 sudo apt-get update
 sudo apt-get upgrade
 
@@ -70,7 +79,7 @@ sudo systemctl disable bonescript.socket
 sudo systemctl enable multi-user.target
 
 //—optional: automatic startup service
-sudo pico /lib/systemd/system/mystartup.service
+sudo pico /lib/systemd/system/mystartup.service #and add the following...
 	[Unit]
 	Description=Start a pythonscript at boot
 	[Service]
@@ -92,7 +101,7 @@ sudo apt-get clean
 git clone git://github.com/jackaudio/jack2.git
 cd jack2
 ./waf configure --alsa
-./waf build
+./waf build #this takes a while
 sudo ./waf install
 cd ..
 sudo rm -r jack2
@@ -101,12 +110,12 @@ sudo ldconfig
 //—install sc3.7
 git clone --recursive git://github.com/supercollider/supercollider.git supercollider
 cd supercollider
-git checkout c7600cc1c9
-#git checkout ddd8c8d75dd00263acf593b062ecbb06686a4574
+git checkout c7600cc1c9 #pick a version from march2014 due to new boost library issues
 git submodule init && git submodule update
 mkdir build && cd build
+#note: make sure you copy the complete line below...
 cmake -L -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DSSE=OFF -DSSE2=OFF -DSUPERNOVA=OFF -DNOVA_SIMD=ON -DNATIVE=OFF -DSC_QT=OFF -DSC_WII=OFF -DSC_ED=OFF -DSC_IDE=OFF -DSC_EL=OFF -DCMAKE_C_FLAGS="-march=armv7-a -mtune=cortex-a8 -mfloat-abi=hard -mfpu=neon" -DCMAKE_CXX_FLAGS="-march=armv7-a -mtune=cortex-a8 -mfloat-abi=hard -mfpu=neon" ..
-make
+make #this takes a while
 sudo make install
 sudo ldconfig
 cd ../..
@@ -124,7 +133,7 @@ sudo reboot
 sudo pico /etc/network/interfaces
 	auto wlan0
 	iface wlan0 inet dhcp
-		wpa-ssid "your_wlan_name" #Medienhaus R112
+		wpa-ssid "your_wlan_name" #e.g. Medienhaus R112
 		wpa-psk "your_wlan_pass" #_the_password_
 		wireless-power off
 sudo ifup wlan0
@@ -133,7 +142,9 @@ sudo ifup wlan0
 sudo pip install twython
 
 //—test alsa
+#note: avoid hot plugging the usb soundcard, do a reboot if the below does not work
 speaker-test -Ddefault:CARD=Device # should play sound through usb soundcard
+#note: stop with ctrl+c
 
 //—realtime
 sudo pico /etc/security/limits.conf
@@ -146,18 +157,6 @@ sudo jackd -P95 -dalsa -dhw:1,0 -p1024 -n3 -s &
 sudo sclang
 > s.boot
 > a= {SinOsc.ar([400,404],0,0.1)}.play
-
-//—optional: save some diskspace
-sudo rm -r /usr/share/opencv
-sudo rm -r /usr/share/desktop-*
-sudo rm -r /usr/share/kde4
-sudo rm -r /usr/share/lxde
-sudo rm -r /usr/share/java
-sudo rm -r /usr/share/gnome*
-sudo rm -r /usr/share/wallpapers
-sudo rm -r /usr/share/doc
-sudo rm -r /usr/share/man
-sudo rm -r /usr/share/locale
 
 //—supercollider automatic startup
 sudo pico /usr/local/share/SuperCollider/SCClassLibrary/DefaultLibrary/Main.sc
@@ -182,4 +181,17 @@ pico mysc.scd
 	"sudo jack_connect SuperCollider:out_1 system:playback_1 &".unixCmd;
 	"sudo jack_connect SuperCollider:out_2 system:playback_2 &".unixCmd;
 	a= {SinOsc.ar([400,404],0,0.2)}.play;
+
+//—optional: save some diskspace
+sudo rm -r /usr/share/opencv
+sudo rm -r /usr/share/desktop-*
+sudo rm -r /usr/share/kde4
+sudo rm -r /usr/share/lxde
+sudo rm -r /usr/share/java
+sudo rm -r /usr/share/gnome*
+sudo rm -r /usr/share/wallpapers
+sudo rm -r /usr/share/doc
+sudo rm -r /usr/share/man
+sudo rm -r /usr/share/locale
+
 ```
