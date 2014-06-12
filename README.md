@@ -17,7 +17,8 @@ dates
 - [x] [15may 14-16](https://github.com/redFrik/udk11-Portable_sonification_projects/tree/master/udk140515): installing and preparing a system on the beaglebone black
 - [ ] 22may: **NO CLASS**
 - [ ] 29may: **NO CLASS** (holiday)
-- [ ] 05jun 14-16: class as normal
+- [x] 05jun 14-16: class as normal
+- [ ] 12jun 14-16: class as normal
 
 bring laptop and headphones.
 
