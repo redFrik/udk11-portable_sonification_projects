@@ -30,6 +30,7 @@ insert the micro sdcard in the bbb, connect mini usb cable to computer and it sh
 open terminal/console application on you laptop and type `ssh debian@beaglebone.local` and the default password is `temppwd`.
 
 note: if you cannot connect and you see the `ssh: Could not resolve hostname beaglebone.local: nodename nor servname provided, or not known` error, connecting an ethernet cable from your laptop to the bbb and try again.
+or (alternatively) try with `ssh debian@192.168.7.2`
 
 note: if you get `WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!`, run this command: `ssh-keygen -R beaglebone.local` to reset the ssh key.
 
