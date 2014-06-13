@@ -48,7 +48,7 @@ echo 'export LC_ALL="en_US.UTF-8"' >> ~/.bashrc #this just to avoid locale warni
 df # will show something like 95% full
 sudo /opt/scripts/tools/grow_partition.sh
 sudo reboot # and log in again
-df # should now show a lot more free space
+df # should now show a lot more free space (circa 40% if 8bg sdcard)
 
 //--update system
 #note if this goes wrong make sure you have internet access on the bbb,
