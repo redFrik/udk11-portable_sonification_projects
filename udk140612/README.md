@@ -50,12 +50,14 @@ s.waitForBoot{
 
 redSys quark
 --
-my personal speaker tests.  i put them into classes to have them available.
+my personal speaker tests.  i have put the tests into classes to have them hidden but still directly available.  i just type...
 ```
 RedTest.speaker([0, 1, 2, 3, 4, 5])
 RedTest.speaker2([0, 1, 2, 3])
 ```
+to try out the speakers.  these are the sc classes i use every time i set up for a concert, lecture, talk or workshop.
 
+to try them out install the redSys quark by `Quarks.install("redSys");`.  but i encourage you to write your own.
 
 panning
 --
