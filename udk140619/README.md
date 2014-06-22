@@ -9,10 +9,15 @@ delaying sound from the microphone
 ```
 s.boot
 
-a= {DelayN.ar(SoundIn.ar, 3, 3)}.play //mono
+a= {DelayN.ar(SoundIn.ar, 3, 3)}.play //mono delay
+
+a= {DelayN.ar(SoundIn.ar, 3, 3)!2}.play //mono delay in both left and right (!2 is same as .dup(2))
 ```
 
-note the maximum delay time versus the actual delaytime.  the maximum allocates memory and makes room for say 3 seconds of mono sound.  3 seconds means 3*44100= 132300 samples if you are running the server at samplerate 44.1kHz.  see DelayN helpfile.
+note the maximum delay time versus the actual delaytime.  the maximum allocates memory and makes room for say 3 seconds of mono sound.  3 seconds means 3*44100= 132300 samples if you are running the server at samplerate 44.1kHz.  if you start to get out-of-memory errors in sc, you should check that you don't have any unreasonable numbers in the maxdelaytime (not more than 30sec or so).  if you still get the error you can increase the memory given to sc (very low by default).  put the following line in you startup file (see under File menu) and recompile.
+
+`Server.local.options.memSize= 65536; //increase memory 8x`
+
 
 ```
 ( //stereo
