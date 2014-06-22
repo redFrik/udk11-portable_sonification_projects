@@ -168,20 +168,3 @@ PanAz.ar
 VBap //in sc3 plugins
 Ambisonics //look into Quarks AmbIEM
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
