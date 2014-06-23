@@ -156,7 +156,7 @@ sudo pico /etc/security/limits.conf
 @audio - rtprio 95
 
 //-test sc
-sudo jackd -P95 -dalsa -dhw:1,0 -p1024 -n3 -s &
+sudo jackd -P75 -dalsa -dhw:1,0 -p1024 -n3 -s &
 sudo sclang
 > s.boot
 > a= {SinOsc.ar([400,404],0,0.1)}.play
@@ -171,7 +171,7 @@ sudo crontab -e #and add…
 
 pico autostart.sh
 	#!/bin/bash
-	/usr/local/bin/jackd -P95 -dalsa -dhw:1,0 -p1024 -n3 -s &
+	/usr/local/bin/jackd -P75 -dalsa -dhw:1,0 -p1024 -n3 -s &
 	/usr/local/bin/scsynth -u 57110 &
 	/usr/local/bin/sclang -rD >> /home/debian/temp.log
 chmod +x autostart.sh
