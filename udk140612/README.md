@@ -166,5 +166,5 @@ other
 ```
 PanAz.ar
 VBap //in sc3 plugins
-Ambisonics //look into Quarks AmbIEM
+Ambisonics //look into the AmbIEM Quark or the ATK in sc3-plugins (ambisonics toolkit)
 ```
