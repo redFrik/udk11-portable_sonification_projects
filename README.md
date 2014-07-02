@@ -17,10 +17,10 @@ dates
 - [x] [15may 14-16](https://github.com/redFrik/udk11-Portable_sonification_projects/tree/master/udk140515): installing and preparing a system on the beaglebone black
 - [ ] 22may: **NO CLASS**
 - [ ] 29may: **NO CLASS** (holiday)
-- [x] [05jun 14-16](https://github.com/redFrik/udk11-Portable_sonification_projects/tree/master/udk140605): class as normal
+- [x] [05jun 14-16](https://github.com/redFrik/udk11-Portable_sonification_projects/tree/master/udk140605): own projects
 - [x] [12jun 14-16](https://github.com/redFrik/udk11-Portable_sonification_projects/tree/master/udk140612): panning sounds and multi channel speaker setups
 - [x] [19jun 14-16](https://github.com/redFrik/udk11-Portable_sonification_projects/tree/master/udk140619): delay lines
-- [ ] [26jun 14-16](https://github.com/redFrik/udk11-Portable_sonification_projects/tree/master/udk140626): routines and program logic
+- [x] [26jun 14-16](https://github.com/redFrik/udk11-Portable_sonification_projects/tree/master/udk140626): own projects (pd)
 - [ ] 03jul 14-16: class as normal
 - [ ] 10jul 14-16: class as normal
 

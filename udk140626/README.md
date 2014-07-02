@@ -1,15 +1,7 @@
 140626
 ======
 
-_routines and program logic_
-
-```
-(
-Routine.run({
-	//todo
-});
-)
-```
+_own projects_
 
 extra: install puredata
 --
@@ -31,8 +23,8 @@ scp mictest.pd debian@beaglebone.local:/home/debian/mictest.pd
 then connect usb soundcard + headphones + mic, log in to the bbb and try these two - one after the other and use ctrl+c to quit in between.
 
 ```
-pd -nogui -audiodev 4 sinetest.pd
-pd -nogui -audiodev 4 mictest.pd
+pd -nogui -audiodev 4 -rt sinetest.pd
+pd -nogui -audiodev 4 -rt mictest.pd
 ```
 
 note: you will need a [loadbang] + [del 500] to start dsp.  sound will not start without this little extra delay when running pd as headless.
