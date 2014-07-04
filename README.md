@@ -21,10 +21,9 @@ dates
 - [x] [12jun 14-16](https://github.com/redFrik/udk11-Portable_sonification_projects/tree/master/udk140612): panning sounds and multi channel speaker setups
 - [x] [19jun 14-16](https://github.com/redFrik/udk11-Portable_sonification_projects/tree/master/udk140619): delay lines
 - [x] [26jun 14-16](https://github.com/redFrik/udk11-Portable_sonification_projects/tree/master/udk140626): own projects (pd)
-- [ ] 03jul 14-16: class as normal
+- [x] [03jul 14-16](https://github.com/redFrik/udk11-Portable_sonification_projects/tree/master/udk140703): own projects (serial)
 - [ ] 10jul 14-16: class as normal
 
 bring laptop and headphones.
-
 
 links to previous semesters... <http://redfrik.github.io/udk00-Audiovisual_Programming/>
