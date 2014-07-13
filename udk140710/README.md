@@ -18,3 +18,4 @@ and now you should be able to get two audio inputs.  test it like this...
 `a= {SoundIn.ar([0, 1])}.play //play mic input from two soundcards in left and right speaker`
 
 
+![two soundcards](IMG_20140710_135010.jpg)
