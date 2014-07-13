@@ -22,7 +22,7 @@ dates
 - [x] [19jun 14-16](https://github.com/redFrik/udk11-Portable_sonification_projects/tree/master/udk140619): delay lines
 - [x] [26jun 14-16](https://github.com/redFrik/udk11-Portable_sonification_projects/tree/master/udk140626): own projects (pd)
 - [x] [03jul 14-16](https://github.com/redFrik/udk11-Portable_sonification_projects/tree/master/udk140703): own projects (serial)
-- [ ] 10jul 14-16: class as normal
+- [x] [10jul 14-16](https://github.com/redFrik/udk11-Portable_sonification_projects/tree/master/udk140710): own projects (multiple soundcards)
 
 bring laptop and headphones.
 
