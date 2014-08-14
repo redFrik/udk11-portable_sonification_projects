@@ -27,3 +27,5 @@ dates
 bring laptop and headphones.
 
 links to previous semesters... <http://redfrik.github.io/udk00-Audiovisual_Programming/>
+
+![portable_sonification_projects](portable_sonification_projects.jpg?raw=true "portable_sonification_projects")
