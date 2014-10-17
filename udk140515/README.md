@@ -45,10 +45,10 @@ sudo dpkg-reconfigure tzdata #and set timezone
 echo 'export LC_ALL="en_US.UTF-8"' >> ~/.bashrc #this just to avoid locale warnings
 
 //—expand filesystem
-df # will show something like 95% full
+df -h # will show something like 93% full
 sudo /opt/scripts/tools/grow_partition.sh
 sudo reboot # and log in again
-df # should now show a lot more free space (circa 40% if 8bg sdcard)
+df -h # should now show a lot more free space (circa 20% in use if 8gb sdcard)
 
 //--update system
 #note if this goes wrong make sure you have internet access on the bbb,
