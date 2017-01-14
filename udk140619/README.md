@@ -6,7 +6,7 @@ _delay lines_
 delaying sound from the microphone
 --
 
-```
+```supercollider
 s.boot
 
 a= {DelayN.ar(SoundIn.ar, 3, 3)}.play //mono delay
@@ -19,7 +19,7 @@ note the maximum delay time versus the actual delaytime.  the maximum allocates 
 `Server.local.options.memSize= 65536; //increase memory 8x`
 
 
-```
+```supercollider
 ( //stereo
 a= {  [
 	DelayN.ar(SoundIn.ar, 3, 1.5),
@@ -56,7 +56,7 @@ chaning delaytimes
 --
 DelayC is better to use when modulating (changing) the delaytime dynamically.
 
-```
+```supercollider
 //doppler effect
 a= {DelayC.ar(SoundIn.ar, 3, LFSaw.ar(0.1).range(3, 0))!2}.play //pitchup
 
@@ -84,7 +84,7 @@ a= {|freq= 0.1| DelayC.ar(SoundIn.ar, 3, SinOsc.ar(freq).range(0, 3))!2}.play
 
 echo effect
 --
-```
+```supercollider
 //careful with feedback below.  use headphones
 a= {CombN.ar(SoundIn.ar, 3, 1, 5)}.play
 
@@ -104,14 +104,14 @@ a= {CombC.ar(SoundIn.ar, 1, 1/[400+SinOsc.ar(0.1, 0, 10), 500+SinOsc.ar(0.12, 0,
 
 and also there is a C version on CombN that is better to use when the delaytime is changing dynamically (less artifacts because it will use cubic interpolation internally).
 
-```
+```supercollider
 a= {CombC.ar(SoundIn.ar, 3, LFSaw.ar(0.05).range(0, 3), 3)!2}.play
 ```
 
 
 more examples
 --
-```
+```supercollider
 {AllpassN.ar(SoundIn.ar, 0.1, 0.1, 0.3)}.play
 
 {CombN.ar(SoundIn.ar, 0.1, 0.1, 0.3)}.play

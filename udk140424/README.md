@@ -12,7 +12,7 @@ supercollider - sound (filtering and interpreting sensor data, logic)
 soundfiles
 ==========
 
-```
+```supercollider
 //boot the server and load two soundfiles into two buffers
 s.boot
 b= Buffer.loadDialog(s)
@@ -56,7 +56,7 @@ Ndef(\looper).clear
 ```
 
 
-```
+```supercollider
 //again
 s.boot
 d= Buffer.loadDialog(s)
@@ -87,7 +87,7 @@ Ndef(\maschine, {PlayBuf.ar(d.numChannels, d.bufnum, 1, SinOsc.kr(SinOsc.kr(0.1)
 ```
 
 
-```
+```supercollider
 //last time same thing
 
 e= Buffer.loadDialog(s)
@@ -107,7 +107,7 @@ Ndef(\soundfile, {PlayBuf.ar(e.numChannels, e.bufnum, 1, MouseX.kr(0, 1)>0.5, Mo
 bbb sensor data
 ===============
 
-```
+```supercollider
 //test with beaglebone black broadcasting data from three sensors
 //NOTE: this will not work without the bbb running in the classroom
 

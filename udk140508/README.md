@@ -22,7 +22,7 @@ you can also download the pd patches and study them.
 microphone cutup
 ================
 
-```
+```supercollider
 //f0 sound detector - automatically record sound into buffers - with playback - originally written for av-programming udk class ws2011/12
 //added more examples and feedback version for av-programming udk ss2014
 (
@@ -119,7 +119,7 @@ feedback cutup
 ==============
 now the same thing but cutting up the output of the beatcutter itself.  so it's a feedback system.
 
-```
+```supercollider
 //f0 sound detector FB - feedback version - cutting up itself
 //you will need to trigger it with some input sounds - see sine and noise below
 (

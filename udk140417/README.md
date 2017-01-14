@@ -85,7 +85,7 @@ supercollider
 
 official homepage: [http://supercollider.github.io]
 
-```
+```supercollider
 s.boot
 
 Ndef(\test).play
@@ -95,7 +95,7 @@ Ndef(\test, {LFSaw.ar(MouseY.kr(100, 4000, 'exponential'), 0, MouseX.kr(0, 0.5))
 s.scope
 ```
 
-```
+```supercollider
 //test with beaglebone black broadcasting data from three sensors
 NetAddr.langPort;//should return 57120
 OSCFunc.trace(true);//posting all incoming osc data

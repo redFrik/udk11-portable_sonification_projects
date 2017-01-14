@@ -8,7 +8,7 @@ speaker tests
 --
 two useful tools to keep around and easily accessible.
 
-```
+```supercollider
 //my speaker test - noise!
 (
 var channels= [0, 1]; //edit here for multi channel tests e.g. [0, 1, 2, 3, 4, 5] for a 6ch system
@@ -51,7 +51,7 @@ s.waitForBoot{
 redSys quark
 --
 my personal speaker tests.  i have put the tests into classes to have them hidden but still directly available.  i just type...
-```
+```supercollider
 RedTest.speaker([0, 1, 2, 3, 4, 5])
 RedTest.speaker2([0, 1, 2, 3])
 ```
@@ -61,7 +61,7 @@ to try them out install the redSys quark by `Quarks.install("redSys");`.  but i 
 
 panning
 --
-```
+```supercollider
 s.boot
 
 (
@@ -107,11 +107,11 @@ Synth(\pantest4)
 
 pingpong delay
 --
-```
+```supercollider
 PingPong //look at helpfile and compare to your version
 ```
 
-```
+```supercollider
 (
 SynthDef(\pingpongeffect, {|in= 0|
 	var src= InFeedback.ar(in, 1);
@@ -140,7 +140,7 @@ multi-channel systems
 --
 example code you can add to your startup file to automatically configure your soundcard.
 note that you will need to edit name and exact number of channels to match which soundcard model you are using.  below only three examples.
-```
+```supercollider
 Server.local.options.device= "2882 [3712]";
 Server.local.options.numInputBusChannels= 8;
 Server.local.options.numOutputBusChannels= 18;
@@ -155,7 +155,7 @@ Server.local.options.numOutputBusChannels= 18;
 ```
 
 try out PanAz.  change the `width` and the number of channels.
-```
+```supercollider
 s.options.numOutputBusChannels= 18;
 s.meter;
 {PanAz.ar(18, PinkNoise.ar(0.1), MouseX.kr(-1, 1), width: 8)}.play;
@@ -163,7 +163,7 @@ s.meter;
 
 other
 --
-```
+```supercollider
 PanAz.ar
 VBap //in sc3 plugins
 Ambisonics //look into the AmbIEM Quark or the ATK in sc3-plugins (ambisonics toolkit)

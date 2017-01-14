@@ -34,7 +34,7 @@ or (alternatively) try with `ssh debian@192.168.7.2`
 
 note: if you get `WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!`, run this command: `ssh-keygen -R beaglebone.local` to reset the ssh key.
 
-```
+```bash
 //new debian bbb image bone-debian-7.4-2014-04-23-2gb.img
 //onto a 8gb card
 //ssh debian@beaglebone.local #log in with temppwd from you laptop
