@@ -16,7 +16,7 @@ rjdj is/was actually puredata and eargasm, world quantizer etc are relatively si
 we can quite easily code the same thing with our beaglebone+supercollider setup.
 
 another system written by [katja](www.katjaas.nl) in pure data is instant decomposer... https://www.youtube.com/watch?v=oML8PzMu3Zs
-read more about it here... [slicejockey](http://www.katjaas.nl/slicejockey/slicejockey.html) and here... [beatdetection](http://www.katjaas.nl/beatdetection/beatdetection.html).
+read more about it here... [slicejockey](https://www.katjaas.nl/slicejockey/slicejockey.html) and here... [beatdetection](https://www.katjaas.nl/beatdetection/beatdetection.html).
 you can also download the pd patches and study them.
 
 microphone cutup

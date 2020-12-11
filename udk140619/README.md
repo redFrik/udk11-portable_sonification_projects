@@ -52,7 +52,7 @@ a= {  [
 a.free;
 ```
 
-chaning delaytimes
+changing delaytimes
 --
 DelayC is better to use when modulating (changing) the delaytime dynamically.
 

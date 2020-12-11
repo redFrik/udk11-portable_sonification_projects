@@ -10,7 +10,7 @@ note: all these things you only need to do once.
 installing debian linux
 --
 
-download the latest debian image... http://beagleboard.org/latest-images/ (Debian (BeagleBone, BeagleBone Black - 2GB SD) 2014-04-23)
+download the latest debian image... https://beagleboard.org/latest-images/ (Debian (BeagleBone, BeagleBone Black - 2GB SD) 2014-04-23)
 
 and copy the .img file over to the sd card using the following tools...
 
